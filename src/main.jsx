@@ -9,9 +9,11 @@ import { Suspense } from "react";
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Provider store={store}>
     <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <App />
-      </Suspense>
+      <div className="bg-indigo-700 h-screen w-full">
+        <Suspense fallback={<div>Loading...</div>}>
+          <App />
+        </Suspense>
+      </div>
     </BrowserRouter>
   </Provider>
 );
