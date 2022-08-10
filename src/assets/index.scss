@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.selector {
+  @apply bg-indigo-900 py-[0.9px] rounded-full w-[50%];
+}
+
+#svg-turkiye-haritasi-container {
+  width: 100% !important;
+}
+
+.city-item {
+  gap: 0 calc(100% - 15px);
+}
