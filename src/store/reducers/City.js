@@ -5,8 +5,26 @@ const name = "city";
 
 const initialState = {
   cities: citiesJson,
+  navData: [
+    {
+      label: "Weather °C",
+      value: "temp",
+      translate: true,
+    },
+    {
+      label: "Feels °C",
+      value: "feels_like",
+      translate: true,
+    },
+    {
+      label: "Humidity %",
+      value: "humidity",
+      translate: false,
+    },
+  ],
   selectedCity: false,
   activeData: null,
+  activeType: 0,
 };
 const reducers = {
   getCities(state, action) {
@@ -43,6 +61,9 @@ const reducers = {
   setActiveDay(state, action) {
     state.activeData = action.payload;
   },
+  setActiveType(state, action) {
+    state.activeType = action.payload || 0;
+  },
 };
 
 const city = createSlice({
@@ -51,7 +72,12 @@ const city = createSlice({
   reducers,
 });
 
-export const { getCities, filterCities, setSelectedCity, setActiveDay } =
-  city.actions;
+export const {
+  getCities,
+  filterCities,
+  setSelectedCity,
+  setActiveDay,
+  setActiveType,
+} = city.actions;
 
 export default city.reducer;
