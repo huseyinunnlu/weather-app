@@ -44,7 +44,7 @@ function Details() {
     [activeType]
   );
   return (
-    <div className="max-h-[70%] min-h-[150px] h-full my-5 cursor-pointer">
+    <div className="max-h-[50%] min-h-[150px] h-full my-auto cursor-pointer">
       <Chart
         options={{
           data,
