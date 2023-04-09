@@ -8,6 +8,7 @@ function RequireApiKey({ children }) {
   }
 
   return <div>{children}</div>;
+  
 }
 
 export default RequireApiKey;
